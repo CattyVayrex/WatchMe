@@ -3,12 +3,7 @@
 
 # WatchMe: Live Watch Together Video App
 
-  
-
 WatchMe is a web-based "Watch Together" app that allows users to watch videos online together in real-time. It is built using:
-
-  
-
 -  **Backend**: Node.js, Express.js
 
 -  **Frontend**: React.js (Vite)
@@ -17,7 +12,6 @@ WatchMe is a web-based "Watch Together" app that allows users to watch videos on
 
 -  **Chat**: A cool live chat feature with a custom emoji system.
 
-  
 
 This app includes the following folders:
 
@@ -26,6 +20,9 @@ This app includes the following folders:
 -  **watchme-server**: The server-side code.
 
   It works by turning given video url to a m3u8  stream video so it can support all kinds of video types.
+![Landing Page](https://i.ibb.co/mVf33tkb/Screenshot-2025-03-02-192401.png)
+![enter image description here](https://i.ibb.co/6061yydn/Screenshot-2025-03-02-193045.png)
+  ![Party Page not full screen](https://i.ibb.co/RZNThRn/Screenshot-2025-03-02-192858.png)
 
 ## Table of Contents
 
