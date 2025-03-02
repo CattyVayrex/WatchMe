@@ -1,0 +1,35 @@
+# React & Vite cache
+watchme-client/.cache/
+watchme-client/.vite/
+watchme-client/node_modules/
+watchme-client/dist/
+watchme-client/build/
+
+# Express server
+watchme-server/node_modules/
+watchme-server/build/
+watchme-server/logs/
+watchme-server/.cache/
+
+# Video files (avoid committing large media files)
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.flv
+*.wmv
+*.webm
+*.ogg
+*.ts
+*.m3u8
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+.DS_Store
+Thumbs.db
