@@ -9,7 +9,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 
-const serverUrl = 'http://167.172.61.249:5000' // Update this with your server's URL (e.g., 'http://localhost:5000')
+const serverUrl = 'http://171.22.26.119:5002' // Update this with your server's URL (e.g., 'http://localhost:5000')
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
