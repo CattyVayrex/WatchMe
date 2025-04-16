@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { PartyContext } from '../context/PartyContext';
 import './LandingPage.css';
+import { config } from '../config';
 
 const LandingPage = () => {
     const [partyCode, setPartyCode] = useState('');
@@ -43,7 +44,7 @@ const LandingPage = () => {
         if (!handleCredentials()) return;
         setIsLeader(true);
         try {
-            const response = await axios.post('/api/create-party', { username: usernameInput, password, videoUrl: initialVideoUrl });
+            const response = await axios.post(`${config.host}/api/create-party`, { username: usernameInput, password, videoUrl: initialVideoUrl });
             setPartyId(response.data.partyId);
             localStorage.setItem('token', response.data.token);
             navigate(`/party/${response.data.partyId}`);
@@ -56,7 +57,7 @@ const LandingPage = () => {
         if (!handleCredentials()) return;
         setIsLeader(false);
         try {
-            const response = await axios.post('/api/join-party', { partyId: partyCode, username: usernameInput, password });
+            const response = await axios.post(`${config.host}/api/join-party`, { partyId: partyCode, username: usernameInput, password });
             if (response.data.success) {
                 setPartyId(partyCode);
                 localStorage.setItem('token', response.data.token);
