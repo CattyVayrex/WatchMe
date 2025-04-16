@@ -9,11 +9,11 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 
-const serverUrl = 'http://171.22.26.119:5002' // Update this with your server's URL (e.g., 'http://localhost:5000')
+const serverUrl = 'https://apiwatchme.randomatic.ir' // Update this with your server's URL (e.g., 'http://localhost:5000')
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
-    cors: { origin: ['http://localhost:5173', 'http://192.168.67.62:5173'] },
+    cors: { origin: ['http://localhost:5173', 'http://192.168.67.62:5173', 'https://watchme.randomatic.ir'] },
 });
 
 app.use(cors());
@@ -22,7 +22,7 @@ app.use('/streams', express.static(path.join(__dirname, 'streams')));
 app.use(
     '/streams',
     (req, res, next) => {
-        res.header('Access-Control-Allow-Origin', 'http://localhost:5173, http://192.168.67.62:5173');
+        res.header('Access-Control-Allow-Origin', 'http://localhost:5173, http://192.168.67.62:5173', 'https://watchme.randomatic.ir');
         next();
     },
     express.static(path.join(__dirname, 'streams'))
